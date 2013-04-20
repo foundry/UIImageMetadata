@@ -20,6 +20,7 @@
 		AB5F120816B4D79600C90CED /* RWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5F11FB16B4D79600C90CED /* RWViewController.m */; };
 		AB5F120916B4D79600C90CED /* UIImageMetadata-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB5F11FC16B4D79600C90CED /* UIImageMetadata-Info.plist */; };
 		AB5F120B16B4D8F500C90CED /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = AB5F120A16B4D8F500C90CED /* Readme.md */; };
+		AB67C12917231A6500F84FAF /* IMG_2291.png in Resources */ = {isa = PBXBuildFile; fileRef = AB67C12817231A6500F84FAF /* IMG_2291.png */; };
 		ABF6DF1516B43FCB00B2EEC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF6DF1416B43FCB00B2EEC3 /* UIKit.framework */; };
 		ABF6DF1716B43FCB00B2EEC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF6DF1616B43FCB00B2EEC3 /* Foundation.framework */; };
 		ABF6DF1916B43FCB00B2EEC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF6DF1816B43FCB00B2EEC3 /* CoreGraphics.framework */; };
@@ -45,6 +46,7 @@
 		AB5F11FC16B4D79600C90CED /* UIImageMetadata-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UIImageMetadata-Info.plist"; sourceTree = "<group>"; };
 		AB5F11FD16B4D79600C90CED /* UIImageMetadata-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageMetadata-Prefix.pch"; sourceTree = "<group>"; };
 		AB5F120A16B4D8F500C90CED /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
+		AB67C12817231A6500F84FAF /* IMG_2291.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2291.png; sourceTree = "<group>"; };
 		ABF6DF1016B43FCB00B2EEC3 /* UIImageMetadata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIImageMetadata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF6DF1416B43FCB00B2EEC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABF6DF1616B43FCB00B2EEC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +91,7 @@
 				AB5F11EE16B4D79600C90CED /* Default.png */,
 				AB5F11EF16B4D79600C90CED /* Default@2x.png */,
 				AB5F11F616B4D79600C90CED /* IMG_2291.JPG */,
+				AB67C12817231A6500F84FAF /* IMG_2291.png */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				AB5F120516B4D79600C90CED /* IMG_2291.JPG in Resources */,
 				AB5F120916B4D79600C90CED /* UIImageMetadata-Info.plist in Resources */,
 				AB5F120B16B4D8F500C90CED /* Readme.md in Resources */,
+				AB67C12917231A6500F84FAF /* IMG_2291.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

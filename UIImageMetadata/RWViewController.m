@@ -115,11 +115,22 @@
 - (void) logMetaDataFromImage:(UIImage*)image
 {
     NSLog(@" %@",NSStringFromSelector(_cmd));
-    NSData *jpeg = UIImageJPEGRepresentation(image, 1.0);
-    CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)jpeg, NULL);
+    NSData *jpegData = UIImageJPEGRepresentation(image, 1.0);
+    CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)jpegData, NULL);
     CFDictionaryRef imageMetaData = CGImageSourceCopyPropertiesAtIndex(source,0,NULL);
     NSLog (@"%@",imageMetaData);
 }
+
+- (void) logMetaDataFromImage2:(UIImage*)image
+{
+    //note that if we use PNGRepresentation the metaData returned is less than the JPEGRepresentation version.
+    NSLog(@" %@",NSStringFromSelector(_cmd));
+    NSData *pngData = UIImagePNGRepresentation(image);
+    CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)pngData, NULL);
+    CFDictionaryRef imageMetaData = CGImageSourceCopyPropertiesAtIndex(source,0,NULL);
+    NSLog (@"%@",imageMetaData);
+}
+
 - (void)viewDidUnload {
     [self setSpinner:nil];
     [super viewDidUnload];

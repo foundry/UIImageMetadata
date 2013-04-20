@@ -34,9 +34,16 @@
 }
 
 - (IBAction)imageFromBundle:(id)sender {
-    NSString* path = [NSBundle pathForResource:@"IMG_2291" ofType:@"JPG" inDirectory:[[NSBundle mainBundle] resourcePath]];
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    [self logMetaDataFromData:data];
+    NSLog(@" image from app bundle");
+    NSURL* url = [NSBundle URLForResource:@"IMG_2291"
+                            withExtension:@"JPG"
+                             subdirectory:nil
+                          inBundleWithURL:[[NSBundle mainBundle] bundleURL]];
+   // NSString* path = [NSBundle pathForResource:@"IMG_2291" ofType:@"JPG" inDirectory:[[NSBundle mainBundle] resourcePath]];
+    [self logMetaDataFromURL:url];
+
+  //  NSData *data = [NSData dataWithContentsOfFile:path];
+  //  [self logMetaDataFromData:data];
     
     UIImage* image = [UIImage imageNamed:@"IMG_2291.JPG"];
     [self logMetaDataFromImage:image];
@@ -46,12 +53,13 @@
 }
 
 - (IBAction)imageFromURL:(id)sender {
-    
+    NSLog(@" image from network URL");
     [[self spinner] startAnimating];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSURL* url = [NSURL URLWithString:@"https://raw.github.com/foundry/UIImageMetadata/master/UIImageMetadata/IMG_2291.JPG"];
+        [self logMetaDataFromURL:url];
         NSData *data = [NSData dataWithContentsOfURL:url];
-        [self logMetaDataFromData:data];
+       // [self logMetaDataFromData:data];
         dispatch_async(dispatch_get_main_queue(), ^{
             UIImage *image = [[UIImage alloc] initWithData:data];
             self.imageView.image = image;
@@ -65,21 +73,21 @@
 
 - (void) logMetaDataFromCamera:(NSDictionary*)info
 {
-    NSMutableDictionary *imageMetadata = [info objectForKey:UIImagePickerControllerMediaMetadata];
-    NSLog (@"imageMetaData %@",imageMetadata);
+    NSLog(@" %@",NSStringFromSelector(_cmd));
+    NSMutableDictionary *imageMetaData = [info objectForKey:UIImagePickerControllerMediaMetadata];
+    NSLog (@"%@",imageMetaData);
 }
 
 - (void) logMetaDataFromAssetLibrary:(NSDictionary*)info
 {
     NSURL *assetURL = [info objectForKey:UIImagePickerControllerReferenceURL];
-    
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     [library assetForURL:assetURL
              resultBlock:^(ALAsset *asset)  {
                  NSMutableDictionary *imageMetadata = nil;
                  NSDictionary *metadata = asset.defaultRepresentation.metadata;
                  imageMetadata = [[NSMutableDictionary alloc] initWithDictionary:metadata];
-                 NSLog (@"imageMetaData %@",imageMetadata);
+                 NSLog (@"imageMetaData from AssetLibrary %@",imageMetadata);
              }
             failureBlock:^(NSError *error) {
                 NSLog (@"error %@",error);
@@ -90,18 +98,27 @@
 
 - (void) logMetaDataFromData:(NSData*)data
 {
+    NSLog(@" %@",NSStringFromSelector(_cmd));
     CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)data, NULL);
     CFDictionaryRef imageMetaData = CGImageSourceCopyPropertiesAtIndex(source,0,NULL);
-    NSLog (@"metadata from NSData %@",imageMetaData);
-    
+    NSLog (@"%@",imageMetaData);
+}
+
+- (void) logMetaDataFromURL:(NSURL*)URL
+{
+    NSLog(@" %@",NSStringFromSelector(_cmd));
+    CGImageSourceRef source = CGImageSourceCreateWithURL((__bridge CFURLRef)URL, NULL);
+    CFDictionaryRef imageMetaData = CGImageSourceCopyPropertiesAtIndex(source,0,NULL);
+    NSLog (@"%@",imageMetaData);
 }
 
 - (void) logMetaDataFromImage:(UIImage*)image
 {
-    NSData *jpeg = [NSData dataWithData:UIImageJPEGRepresentation(image, 1.0)];
+    NSLog(@" %@",NSStringFromSelector(_cmd));
+    NSData *jpeg = UIImageJPEGRepresentation(image, 1.0);
     CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)jpeg, NULL);
     CFDictionaryRef imageMetaData = CGImageSourceCopyPropertiesAtIndex(source,0,NULL);
-    NSLog (@"metadata from UIImage %@",imageMetaData);
+    NSLog (@"%@",imageMetaData);
 }
 - (void)viewDidUnload {
     [self setSpinner:nil];

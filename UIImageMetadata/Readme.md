@@ -11,7 +11,8 @@ Image obtained from four sources:
 
 Run the application and watch the logs to see how metadata is read from these sources.  Note that metadata read from a UIImage is a small subset of the metadata stored with the original file. 
 
-Also take a look at the 'Orientation' metadata key. Note that it _differs_ from the UIImage.imageOrientation property value. See my answer to this Stack Overflow question: [Force UIImagePickerController to take photo in portrait orientation/dimensions iOS](http://stackoverflow.com/questions/14484816/force-uiimagepickercontroller-to-take-photo-in-portrait-orientation-dimensions-i)
+Also take a look at the 'Orientation' metadata key (kCGImagePropertyOrientation
+). Note that it _differs_ from the UIImage.imageOrientation property value. See my answer to this Stack Overflow question: [Force UIImagePickerController to take photo in portrait orientation/dimensions iOS](http://stackoverflow.com/questions/14484816/force-uiimagepickercontroller-to-take-photo-in-portrait-orientation-dimensions-i)
 
 
 -----

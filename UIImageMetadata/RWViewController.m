@@ -1,9 +1,9 @@
-//
-//  RWViewController.m
-//  TestMetaData
-//
-//  Copyright (c) 2013 foundry. Feel free to copy.
-//
+    //
+    //  RWViewController.m
+    //  TestMetaData
+    //
+    //  Copyright (c) 2013 foundry. Feel free to copy.
+    //
 
 #import "RWViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
@@ -21,7 +21,7 @@
     self.imageView.image = image;
     
     NSLog (@"info %@",info);
-        
+    
     if ([[info allKeys] containsObject:UIImagePickerControllerReferenceURL]){
         NSLog (@"photolibrary pic");
         [self logMetaDataFromAssetLibrary:info];
@@ -29,7 +29,7 @@
         NSLog (@"camera pic");
         [self logMetaDataFromCamera:info];
     }
-   [self logMetaDataFromImage:self.imageView.image];
+    [self logMetaDataFromImage:self.imageView.image];
     NSLog (@"image.imageOrientation %d",image.imageOrientation);
 }
 
@@ -76,10 +76,10 @@
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     [library assetForURL:assetURL
              resultBlock:^(ALAsset *asset)  {
-                NSMutableDictionary *imageMetadata = nil;
-                NSDictionary *metadata = asset.defaultRepresentation.metadata;
-                imageMetadata = [[NSMutableDictionary alloc] initWithDictionary:metadata];
-                NSLog (@"imageMetaData %@",imageMetadata);
+                 NSMutableDictionary *imageMetadata = nil;
+                 NSDictionary *metadata = asset.defaultRepresentation.metadata;
+                 imageMetadata = [[NSMutableDictionary alloc] initWithDictionary:metadata];
+                 NSLog (@"imageMetaData %@",imageMetadata);
              }
             failureBlock:^(NSError *error) {
                 NSLog (@"error %@",error);
@@ -93,7 +93,7 @@
     CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)data, NULL);
     CFDictionaryRef imageMetaData = CGImageSourceCopyPropertiesAtIndex(source,0,NULL);
     NSLog (@"metadata from NSData %@",imageMetaData);
- 
+    
 }
 
 - (void) logMetaDataFromImage:(UIImage*)image

@@ -44,7 +44,7 @@
 		AB5F11FB16B4D79600C90CED /* RWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWViewController.m; sourceTree = "<group>"; };
 		AB5F11FC16B4D79600C90CED /* UIImageMetadata-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UIImageMetadata-Info.plist"; sourceTree = "<group>"; };
 		AB5F11FD16B4D79600C90CED /* UIImageMetadata-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageMetadata-Prefix.pch"; sourceTree = "<group>"; };
-		AB5F120A16B4D8F500C90CED /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Readme.md; path = UIImageMetadata/Readme.md; sourceTree = "<group>"; };
+		AB5F120A16B4D8F500C90CED /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 		ABF6DF1016B43FCB00B2EEC3 /* UIImageMetadata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIImageMetadata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF6DF1416B43FCB00B2EEC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABF6DF1616B43FCB00B2EEC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };

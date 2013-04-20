@@ -69,25 +69,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB5F11EA16B4D79600C90CED /* UIImageMetadata */ = {
+		AB417D3D1723037100766776 /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				AB5F11F016B4D79600C90CED /* InfoPlist.strings */,
+				AB5F11F716B4D79600C90CED /* main.m */,
+				AB5F11F816B4D79600C90CED /* RWAppDelegate.h */,
+				AB5F11F916B4D79600C90CED /* RWAppDelegate.m */,
+				AB5F11FC16B4D79600C90CED /* UIImageMetadata-Info.plist */,
+				AB5F11FD16B4D79600C90CED /* UIImageMetadata-Prefix.pch */,
+			);
+			name = "supporting files";
+			sourceTree = "<group>";
+		};
+		AB417D3E1723037D00766776 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB5F11ED16B4D79600C90CED /* Default-568h@2x.png */,
+				AB5F11EE16B4D79600C90CED /* Default.png */,
+				AB5F11EF16B4D79600C90CED /* Default@2x.png */,
+				AB5F11F616B4D79600C90CED /* IMG_2291.JPG */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		AB417D3F172303B400766776 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				AB5F11EB16B4D79600C90CED /* CVImagePickerSegmentedControl.h */,
 				AB5F11EC16B4D79600C90CED /* CVImagePickerSegmentedControl.m */,
-				AB5F11ED16B4D79600C90CED /* Default-568h@2x.png */,
-				AB5F11EE16B4D79600C90CED /* Default.png */,
-				AB5F11EF16B4D79600C90CED /* Default@2x.png */,
-				AB5F11F016B4D79600C90CED /* InfoPlist.strings */,
 				AB5F11F216B4D79600C90CED /* RWViewController_iPad.xib */,
 				AB5F11F416B4D79600C90CED /* RWViewController_iPhone.xib */,
-				AB5F11F616B4D79600C90CED /* IMG_2291.JPG */,
-				AB5F11F716B4D79600C90CED /* main.m */,
-				AB5F11F816B4D79600C90CED /* RWAppDelegate.h */,
-				AB5F11F916B4D79600C90CED /* RWAppDelegate.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		AB5F11EA16B4D79600C90CED /* UIImageMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				AB417D3F172303B400766776 /* UI */,
+				AB417D3E1723037D00766776 /* resources */,
+				AB417D3D1723037100766776 /* supporting files */,
 				AB5F11FA16B4D79600C90CED /* RWViewController.h */,
 				AB5F11FB16B4D79600C90CED /* RWViewController.m */,
-				AB5F11FC16B4D79600C90CED /* UIImageMetadata-Info.plist */,
-				AB5F11FD16B4D79600C90CED /* UIImageMetadata-Prefix.pch */,
 			);
 			path = UIImageMetadata;
 			sourceTree = "<group>";

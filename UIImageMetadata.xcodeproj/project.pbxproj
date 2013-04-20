@@ -289,11 +289,7 @@
 				GCC_PREFIX_HEADER = "UIImageMetaData/UIImageMetadata-Prefix.pch";
 				INFOPLIST_FILE = "UIImageMetaData/UIImageMetadata-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Release-iphoneos\"",
-					"\"$(SRCROOT)/Release-simulator-iphonesimulator\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = UIImageMetadata;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -307,11 +303,7 @@
 				GCC_PREFIX_HEADER = "UIImageMetaData/UIImageMetadata-Prefix.pch";
 				INFOPLIST_FILE = "UIImageMetaData/UIImageMetadata-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Release-iphoneos\"",
-					"\"$(SRCROOT)/Release-simulator-iphonesimulator\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = UIImageMetadata;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
